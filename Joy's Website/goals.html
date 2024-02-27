@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+            transition: transform 0.3s ease-in-out;
+            z-index: 0;
+        }
+
+        .image:hover {
+            transform: scale(1.4);
+            z-index: 0;
+        }
+
+      
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: orangered;
+}
+
+header a {
+    margin-right: 40px;
+    color: orange;
+}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.container');
+            const images = document.querySelectorAll('.image');
+
+            images.forEach((image, index) => {
+                image.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
+                image.style.left = `${Math.random() * (window.innerWidth - 150)}px`;
+                image.style.zIndex = index;
+            });
+
+            container.addEventListener('mouseover', function (event) {
+                if (event.target.classList.contains('image')) {
+                    event.target.style.zIndex = 0;
+                }
+            });
+
+            container.addEventListener('mouseout', function (event) {
+                if (event.target.classList.contains('image')) {
+                    event.target.style.zIndex = parseInt(event.target.style.zIndex) - 100;
+                }
+            });
+        });
+    </script>
+    <title>Image Overlap</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="bibleVerses.html">Verses</a>
+            <a href="affirmations.html">affirmations</a>
+
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Existing images -->
+        <img src="s1.jpg" alt="Image 1" class="image">
+        <img src="s2.jpg" alt="Image 2" class="image">
+        <img src="s3.jpg" alt="Image 3" class="image">
+        <img src="s4.jpg" alt="Image 1" class="image">
+        <img src="s5.jpg" alt="Image 2" class="image">
+        <img src="s6.jpg" alt="Image 3" class="image">
+        <img src="s7.jpg" alt="Image 1" class="image">
+        <img src="s8.jpg" alt="Image 2" class="image">
+        <img src="s9.jpg" alt="Image 3" class="image">
+        <img src="s10.jpg" alt="Image 1" class="image">
+        <img src="s11.jpg" alt="Image 2" class="image">
+        <img src="s12.jpg" alt="Image 3" class="image">
+        <img src="s13.jpg" alt="Image 1" class="image">
+        <img src="s14.jpg" alt="Image 2" class="image">
+        <img src="s15.jpg" alt="Image 3" class="image">
+        <img src="s16.jpg" alt="Image 1" class="image">
+        <img src="s17.jpg" alt="Image 2" class="image">
+        <img src="s18.jpg" alt="Image 3" class="image">
+    
+        <!-- Additional images -->
+             <!-- ... (previous images) -->
+
+             <img src="s19.jpg" alt="Image 1" class="image">
+             <img src="s20.jpg" alt="Image 2" class="image">
+             <img src="s21.jpg" alt="Image 3" class="image">
+             <img src="s22.jpg" alt="Image 1" class="image">
+             <img src="s23.jpg" alt="Image 2" class="image">
+             <img src="s24.jpg" alt="Image 3" class="image">
+             <img src="s25.jpg" alt="Image 1" class="image">
+             <img src="s26.jpg" alt="Image 2" class="image">
+             <img src="s27.jpg" alt="Image 3" class="image">
+             <img src="s28.jpg" alt="Image 1" class="image">
+             <img src="s29.jpg" alt="Image 2" class="image">
+             <img src="s30.jpg" alt="Image 3" class="image">
+             <img src="s31.jpg" alt="Image 1" class="image">
+             <img src="s32.jpg" alt="Image 2" class="image">
+             <img src="s33.jpg" alt="Image 3" class="image">
+             <img src="s34.jpg" alt="Image 1" class="image">
+             <img src="s35.jpg" alt="Image 2" class="image">
+             <img src="s36.jpg" alt="Image 3" class="image">
+             <img src="s37.jpg" alt="Image 1" class="image">
+             <img src="s38.jpg" alt="Image 2" class="image">
+             <img src="s39.jpg" alt="Image 3" class="image">
+             <img src="s40.jpg" alt="Image 1" class="image">
+             <img src="s41.jpg" alt="Image 2" class="image">
+             <img src="s42.jpg" alt="Image 3" class="image">
+             <img src="s43.jpg" alt="Image 1" class="image">
+             <img src="s44.jpg" alt="Image 2" class="image">
+             <img src="s45.jpg" alt="Image 3" class="image">
+             <img src="s46.jpg" alt="Image 1" class="image">
+             <img src="s47.jpg" alt="Image 2" class="image">
+             <img src="s48.jpg" alt="Image 3" class="image">
+             <img src="s49.jpg" alt="Image 1" class="image">
+             <img src="s50.jpg" alt="Image 2" class="image">
+     
+    
+        <!-- ... -->
+    </div>
+    
+</body>
+
+</html>
